@@ -4,27 +4,27 @@
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"monospace:size=10",
-	"JoyPixels:pixelsize=8:antialias=true:autohint=true"
+	"ShureTechMono Nerd Font:size=14:style=regular",
+	"Symbola:pixelsize=22:antialias=true:autohint=true"
 };
 static const unsigned int bgalpha = 0xe0;
 static const unsigned int fgalpha = OPAQUE;
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
-	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+	/*    fg                bg       */
+	[SchemeNorm]  = { "#EDEDF7", "#252525" },
+	[SchemeSel]   = { "#151515", "#E5B1A4" },
+	[SchemeOut]   = { "#252525", "#332E57" },
 };
 static const unsigned int alphas[SchemeLast][2] = {
-	/*		fgalpha		bgalphga	*/
-	[SchemeNorm] = { fgalpha, bgalpha },
-	[SchemeSel] = { fgalpha, bgalpha },
-	[SchemeOut] = { fgalpha, bgalpha },
+	/*    fgalpha		bgalphga	*/
+	[SchemeNorm]  = { fgalpha, bgalpha },
+	[SchemeSel]   = { fgalpha, bgalpha },
+	[SchemeOut]   = { fgalpha, bgalpha },
 };
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 0;
+static unsigned int lines = 0;
 
 /*
  * Characters not considered part of a word while deleting words
